@@ -7,6 +7,7 @@ html {
   background-color: #f0f0f0;
   margin: 0;
   font-family: Arial, sans-serif;
+  perspective: 1000px;
 }
 
 .dice {
@@ -56,20 +57,20 @@ html {
 }
 
 .rotate-front {
-  transform: rotateX(-180deg) rotateY(0deg);
+  transform: rotateX(360deg) rotateY(360deg);
 }
 .rotate-back {
-  transform: rotateX(180deg) rotateY(0deg);
+  transform: rotateX(180deg) rotateY(360deg);
 }
 .rotate-right {
-  transform: rotateY(-180deg) rotateX(0deg);
+  transform: rotateX(360deg) rotateY(270deg);
 }
 .rotate-left {
-  transform: rotateY(180deg) rotateX(0deg);
+  transform: rotateX(360deg) rotateY(90deg);
 }
 .rotate-top {
-  transform: rotateX(-90deg);
+  transform: rotateX(270deg) rotateY(360deg);
 }
 .rotate-bottom {
-  transform: rotateX(90deg);
+  transform: rotateX(90deg) rotateY(360deg);
 }
