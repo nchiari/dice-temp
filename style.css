@@ -1,42 +1,43 @@
 body {
   text-align: center;
-}
-html {
-  height: 100%;
+  font-family: Arial, sans-serif;
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
   background-color: #eaeaea;
-  margin: 0;
-  font-family: Arial, sans-serif;
+}
+
+html {
   perspective: 1000px;
 }
 
-#dice {
-  margin: 20px auto;
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 650px;
 }
 
-button {
-  display: inline-block;
-  padding: 10px 20px;
-  margin-top: 20px; /* Espacio arriba del botón */
-  font-size: 18px;
-  color: #fff;
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  outline: none;
-  transition: background-color 0.2s;
+.dice-container {
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
-button:hover {
-  background-color: #0056b3;
+.dice-container h2 {
+  margin: 0 0 20px;
+  font-weight: bold;
+  font-size: 24px;
 }
 
 .dice {
   width: 100px;
   height: 100px;
+  margin: 0 auto 20px;
   position: relative;
   transform-style: preserve-3d;
   transition: transform 1s, box-shadow 1s;
@@ -49,7 +50,7 @@ button:hover {
 .dice.rotate-left,
 .dice.rotate-top,
 .dice.rotate-bottom {
-  box-shadow: none; /* Esto removerá la sombra durante la rotación */
+  box-shadow: none;
 }
 
 .side {
@@ -65,16 +66,6 @@ button:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   transform: rotateY(0deg) translateZ(51px);
-}
-.side:before,
-.side:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -2px;
-  right: 0;
-  bottom: 0;
-  border-radius: 4px 0 0 4px;
 }
 
 .front {
@@ -101,6 +92,25 @@ button:hover {
   height: 50px;
   background-color: #000;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
 }
 
 .rotate-front {

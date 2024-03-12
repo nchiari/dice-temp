@@ -3,20 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dado Interactivo - Temperatura</title>
+    <title>Dados Interactivos</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1 style="text-align: center; font-weight: bold">Temperatura</h1>
-    <div id="dice" class="dice">
-      <div class="side front">80</div>
-      <div class="side back">85</div>
-      <div class="side right">90</div>
-      <div class="side left">95</div>
-      <div class="side top">100</div>
-      <div class="side bottom"><div class="circle"></div></div>
+    <div class="grid-container">
+      <div class="dice-container">
+        <h2>Temperatura</h2>
+        <div id="dice1" class="dice">
+          <div class="side front">80</div>
+          <div class="side back">85</div>
+          <div class="side right">90</div>
+          <div class="side left">95</div>
+          <div class="side top">100</div>
+          <div class="side bottom"><div class="circle"></div></div>
+        </div>
+        <button onclick="rollDice('dice1')">Roll</button>
+      </div>
+
+      <div class="dice-container">
+        <h2>Molienda</h2>
+        <div id="dice2" class="dice">
+          <div class="side front">Fina</div>
+          <div class="side back"><div class="circle"></div></div>
+          <div class="side right">Media fina</div>
+          <div class="side left"><div class="circle"></div></div>
+          <div class="side top">Media</div>
+          <div class="side bottom">Gruesa</div>
+        </div>
+        <button onclick="rollDice('dice2')">Roll</button>
+      </div>
+
+      <div class="dice-container">
+        <h2>Tiempo</h2>
+        <div id="dice3" class="dice">
+          <div class="side front">2 min</div>
+          <div class="side back">2:30 min</div>
+          <div class="side right">3 min</div>
+          <div class="side left">3:30 min</div>
+          <div class="side top">4 min</div>
+          <div class="side bottom">5 min</div>
+        </div>
+        <button onclick="rollDice('dice3')">Roll</button>
+      </div>
+
+      <div class="dice-container">
+        <h2>Ratio</h2>
+        <div id="dice4" class="dice">
+          <div class="side front">1:10</div>
+          <div class="side back">1:12</div>
+          <div class="side right">1:14</div>
+          <div class="side left">1:16</div>
+          <div class="side top">1:18</div>
+          <div class="side bottom">1:20</div>
+        </div>
+        <button onclick="rollDice('dice4')">Roll</button>
+      </div>
     </div>
-    <button id="rollButton">Roll</button>
-    <script src="scriptv1.js"></script>
+
+    <script src="script.js"></script>
   </body>
 </html>

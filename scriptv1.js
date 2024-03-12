@@ -1,14 +1,13 @@
-const dice = document.getElementById("dice")
-const rollButton = document.getElementById("rollButton")
-
-// Función para generar una rotación aleatoria y aplicar la clase correspondiente al dado
-function rollDice() {
+// Función para generar una rotación aleatoria y aplicar la clase correspondiente al dado específico
+function rollDice(diceId) {
+  const dice = document.getElementById(diceId)
   const randomNum = Math.floor(Math.random() * 6) + 1
   let diceClass = ""
 
-  // Eliminar las clases de rotación anteriores antes de agregar una nueva
-  dice.className = "dice" // Reinicia las clases
+  // Reinicia las clases para el dado específico antes de agregar una nueva clase de rotación
+  dice.className = "dice"
 
+  // Determina la nueva clase de rotación en función del número aleatorio
   switch (randomNum) {
     case 1:
       diceClass = "rotate-front"
@@ -30,12 +29,14 @@ function rollDice() {
       break
   }
 
-  // Agrega la nueva clase de rotación
+  // Agrega la nueva clase de rotación al dado específico
   dice.classList.add(diceClass)
 }
 
-// Evento de click para el dado
-dice.addEventListener("click", rollDice)
-
-// Evento de click para el botón "Roll"
-rollButton.addEventListener("click", rollDice)
+// Asigna eventos de click a cada botón de "Roll"
+document.querySelectorAll(".dice-container button").forEach((button) => {
+  button.addEventListener("click", function () {
+    const diceId = this.previousElementSibling.id // Obtiene el ID del dado asociado al botón
+    rollDice(diceId) // Llama a la función de rotación para el dado específico
+  })
+})
