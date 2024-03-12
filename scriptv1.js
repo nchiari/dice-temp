@@ -1,12 +1,3 @@
-document.addEventListener("DOMContentLoaded", (event) => {
-  document.querySelectorAll(".dice-container button").forEach((button) => {
-    button.addEventListener("click", function () {
-      const diceId = this.dataset.diceId // Usa dataset para acceder al atributo data-*
-      rollDice(diceId) // Llama a la función de rotación para el dado específico
-    })
-  })
-})
-
 // Función para generar una rotación aleatoria y aplicar la clase correspondiente al dado específico
 function rollDice(diceId) {
   const dice = document.getElementById(diceId)
@@ -45,7 +36,7 @@ function rollDice(diceId) {
 // Asigna eventos de click a cada botón de "Roll"
 document.querySelectorAll(".dice-container button").forEach((button) => {
   button.addEventListener("click", function () {
-    const diceId = this.getAttribute("data-dice-id") // Obtiene el ID del dado desde el atributo data-dice-id
+    const diceId = this.previousElementSibling.id // Obtiene el ID del dado asociado al botón
     rollDice(diceId) // Llama a la función de rotación para el dado específico
   })
 })
