@@ -33,13 +33,13 @@ html {
   transform: rotateY(0deg) translateZ(50px);
 }
 .back {
-  transform: rotateY(180deg) translateZ(50px);
+  transform: rotateX(180deg) rotateY(180deg) translateZ(50px);
 }
 .right {
-  transform: rotateY(90deg) translateZ(50px);
+  transform: rotateY(90deg) rotateZ(180deg) translateZ(50px);
 }
 .left {
-  transform: rotateY(-90deg) translateZ(50px);
+  transform: rotateY(-90deg) rotateZ(180deg) translateZ(50px);
 }
 .top {
   transform: rotateX(90deg) translateZ(50px);
@@ -54,21 +54,22 @@ html {
   background-color: #000;
   border-radius: 50%;
 }
+
 .rotate-front {
-  transform: rotateX(-180deg) rotateY(0deg);
+  transform: rotateY(0deg) rotateX(0deg);
 }
 .rotate-back {
-  transform: rotateX(180deg) rotateY(0deg);
+  transform: rotateY(180deg) rotateX(180deg);
 }
 .rotate-right {
-  transform: rotateY(-180deg) rotateX(0deg);
+  transform: rotateY(90deg) rotateZ(180deg);
 }
 .rotate-left {
-  transform: rotateY(180deg) rotateX(0deg);
+  transform: rotateY(-90deg) rotateZ(180deg);
 }
 .rotate-top {
-  transform: rotateX(-90deg);
+  transform: rotateX(90deg);
 }
 .rotate-bottom {
-  transform: rotateX(90deg);
+  transform: rotateX(-90deg);
 }
