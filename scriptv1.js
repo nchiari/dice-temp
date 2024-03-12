@@ -36,7 +36,7 @@ function rollDice(diceId) {
 // Asigna eventos de click a cada botón de "Roll"
 document.querySelectorAll(".dice-container button").forEach((button) => {
   button.addEventListener("click", function () {
-    const diceId = this.previousElementSibling.id // Obtiene el ID del dado asociado al botón
+    const diceId = this.getAttribute("data-dice-id") // Obtiene el ID del dado desde el atributo data-dice-id
     rollDice(diceId) // Llama a la función de rotación para el dado específico
   })
 })
