@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dado Digital</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Dado Interactivo</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="dice" onclick="rollDice()">
-      <div class="side" id="side1">80</div>
-      <div class="side" id="side2">85</div>
-      <div class="side" id="side3">90</div>
-      <div class="side" id="side4">95</div>
-      <div class="side" id="side5">100</div>
-      <div class="side" id="side6"><div class="circle"></div></div>
+    <div id="dice" class="dice">
+      <div class="side front">80</div>
+      <div class="side back">85</div>
+      <div class="side right">90</div>
+      <div class="side left">95</div>
+      <div class="side top">100</div>
+      <div class="side bottom"><div class="circle"></div></div>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>

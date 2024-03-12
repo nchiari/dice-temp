@@ -1,8 +1,29 @@
-function rollDice() {
-  const dice = document.getElementById("dice")
-  const randomSide = Math.floor(Math.random() * 6) + 1
-  dice.style.transform = `rotateY(${randomSide * 60}deg)`
+const dice = document.getElementById("dice")
 
-  // Agrega lógica para manejar la animación y detener el dado en una cara específica
-  // Esto es solo un ejemplo básico y puede requerir ajustes para funcionar como se desea
-}
+dice.addEventListener("click", () => {
+  const randomNum = Math.floor(Math.random() * 6) + 1
+  let diceClass = ""
+
+  switch (randomNum) {
+    case 1:
+      diceClass = "rotate-front"
+      break
+    case 2:
+      diceClass = "rotate-back"
+      break
+    case 3:
+      diceClass = "rotate-right"
+      break
+    case 4:
+      diceClass = "rotate-left"
+      break
+    case 5:
+      diceClass = "rotate-top"
+      break
+    case 6:
+      diceClass = "rotate-bottom"
+      break
+  }
+
+  dice.setAttribute("class", "dice " + diceClass)
+})
