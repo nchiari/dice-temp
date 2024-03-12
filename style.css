@@ -42,9 +42,7 @@ html {
   right: 0;
   bottom: 0;
   border-left: 2px solid #fff;
-  opacity: 1;
   border-radius: 4px 0 0 4px;
-  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .front {
