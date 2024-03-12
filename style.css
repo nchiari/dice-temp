@@ -9,12 +9,17 @@ html {
   font-family: Arial, sans-serif;
 }
 
+.container {
+  perspective: 1000px;
+}
+
 .dice {
   width: 100px;
   height: 100px;
   position: relative;
   transform-style: preserve-3d;
   transition: transform 1s;
+  transform-origin: center center;
 }
 
 .side {
