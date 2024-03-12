@@ -15,8 +15,17 @@ html {
   height: 100px;
   position: relative;
   transform-style: preserve-3d;
-  transition: transform 1s;
+  transition: transform 1s, box-shadow 1s;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.dice.rotate-front,
+.dice.rotate-back,
+.dice.rotate-right,
+.dice.rotate-left,
+.dice.rotate-top,
+.dice.rotate-bottom {
+  box-shadow: none; /* Esto removerá la sombra durante la rotación */
 }
 
 .side {
@@ -32,6 +41,7 @@ html {
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.9));
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
+  transform: rotateY(0deg) translateZ(51px);
 }
 .side:before,
 .side:after {
