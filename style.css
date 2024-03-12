@@ -15,7 +15,7 @@ html {
   height: 100px;
   position: relative;
   transform-style: preserve-3d;
-  transition: transform 1s, box-shadow 1s;
+  transition: transform 2s ease-in-out;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -50,7 +50,6 @@ html {
   left: -2px;
   right: 0;
   bottom: 0;
-  border-left: 2px solid #fff;
   border-radius: 4px 0 0 4px;
 }
 

@@ -1,29 +1,18 @@
 const dice = document.getElementById("dice")
 
 dice.addEventListener("click", () => {
-  const randomNum = Math.floor(Math.random() * 6) + 1
-  let diceClass = ""
+  // Números aleatorios para las rotaciones en X, Y, y Z
+  const xRand = getRandomInt(1, 16) * 90 // Asegúrate de que sea múltiplo de 90
+  const yRand = getRandomInt(1, 16) * 90
+  const zRand = getRandomInt(1, 16) * 90 // La rotación en Z es opcional y puede hacer que el dado parezca más dinámico
 
-  switch (randomNum) {
-    case 1:
-      diceClass = "rotate-front"
-      break
-    case 2:
-      diceClass = "rotate-back"
-      break
-    case 3:
-      diceClass = "rotate-right"
-      break
-    case 4:
-      diceClass = "rotate-left"
-      break
-    case 5:
-      diceClass = "rotate-top"
-      break
-    case 6:
-      diceClass = "rotate-bottom"
-      break
-  }
-
-  dice.setAttribute("class", "dice " + diceClass)
+  // Aplicar rotaciones al dado
+  dice.style.transform = `rotateX(${xRand}deg) rotateY(${yRand}deg) rotateZ(${zRand}deg)`
 })
+
+// Función para obtener un número entero aleatorio
+function getRandomInt(min, max) {
+  min = Math.ceil(min)
+  max = Math.floor(max)
+  return Math.floor(Math.random() * (max - min + 1)) + min
+}
