@@ -15,7 +15,7 @@ html {
   height: 100px;
   position: relative;
   transform-style: preserve-3d;
-  transition: transform 2s ease-in-out;
+  transition: transform 2s cubic-bezier(0.2, 0.8, 0.2, 1);
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
