@@ -40,3 +40,10 @@ document.querySelectorAll(".dice-container button").forEach((button) => {
     rollDice(diceId) // Llama a la función de rotación para el dado específico
   })
 })
+
+// Agrega la función que se ejecutará cuando la página cargue
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".dice").forEach((dice) => {
+    rollDice(dice.id) // Rota cada dado al cargar la página
+  })
+})
