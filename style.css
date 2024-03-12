@@ -60,7 +60,7 @@ html {
   transform: rotateX(360deg) rotateY(360deg);
 }
 .rotate-back {
-  transform: rotateX(180deg) rotateY(360deg);
+  transform: rotateX(0deg) rotateY(180deg);
 }
 .rotate-right {
   transform: rotateX(360deg) rotateY(270deg);
