@@ -32,6 +32,7 @@ html {
   justify-content: center;
   align-items: center;
   font-size: 20px;
+  backface-visibility: hidden;
 }
 
 .front {
@@ -67,14 +68,14 @@ html {
   transform: rotateY(180deg) rotateX(180deg);
 }
 .rotate-right {
-  transform: rotateY(90deg) rotateZ(180deg);
+  transform: rotateY(90deg) rotateX(0deg);
 }
 .rotate-left {
-  transform: rotateY(-90deg) rotateZ(180deg);
+  transform: rotateY(-90deg) rotateX(0deg);
 }
 .rotate-top {
-  transform: rotateX(90deg);
+  transform: rotateX(90deg) rotateY(180deg);
 }
 .rotate-bottom {
-  transform: rotateX(-90deg);
+  transform: rotateX(-90deg) rotateY(180deg);
 }
